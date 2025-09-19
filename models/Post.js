@@ -12,20 +12,20 @@ const postSchema = new mongoose.Schema({
   
   // SEO Meta Tags
   metaTitle: { type: String}, // Optimal length for title tags
-  metaDescription: { type: String, maxlength: 160 }, // Optimal length for meta descriptions
+  metaDescription: { type: String, maxlength: 500 }, // Optimal length for meta descriptions
   metaKeywords: { type: String }, // Comma-separated keywords
   metaImage: { type: String }, // URL to the featured image for social sharing
   canonicalUrl: { type: String }, // Canonical URL for SEO
   
   // Open Graph Meta Tags
   ogTitle: { type: String },
-  ogDescription: { type: String, maxlength: 300 },
+  ogDescription: { type: String, maxlength: 500 },
   ogImage: { type: String },
   ogType: { type: String, default: 'article' },
   
   // Twitter Card Meta Tags
-  twitterTitle: { type: String, maxlength: 150 },
-  twitterDescription: { type: String, maxlength: 200 },
+  twitterTitle: { type: String, maxlength: 200 },
+  twitterDescription: { type: String, maxlength: 500 },
   twitterImage: { type: String },
   twitterCard: { type: String, enum: ['summary', 'summary_large_image', 'app', 'player'], default: 'summary_large_image' },
   
