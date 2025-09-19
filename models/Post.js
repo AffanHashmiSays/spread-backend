@@ -19,7 +19,7 @@ const postSchema = new mongoose.Schema({
   
   // Open Graph Meta Tags
   ogTitle: { type: String },
-  ogDescription: { type: String, maxlength: 160 },
+  ogDescription: { type: String, maxlength: 300 },
   ogImage: { type: String },
   ogType: { type: String, default: 'article' },
   
