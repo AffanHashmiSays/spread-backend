@@ -24,7 +24,7 @@ const postSchema = new mongoose.Schema({
   ogType: { type: String, default: 'article' },
   
   // Twitter Card Meta Tags
-  twitterTitle: { type: String, maxlength: 70 },
+  twitterTitle: { type: String, maxlength: 150 },
   twitterDescription: { type: String, maxlength: 200 },
   twitterImage: { type: String },
   twitterCard: { type: String, enum: ['summary', 'summary_large_image', 'app', 'player'], default: 'summary_large_image' },
@@ -41,4 +41,4 @@ postSchema.index({ slug: 1 });
 postSchema.index({ status: 1, createdAt: -1 });
 postSchema.index({ categoryIds: 1, status: 1 });
 
-export default mongoose.model('Post', postSchema); 
+export default mongoose.model('Post', postSchema);
